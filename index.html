@@ -1,50 +1,361 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-  <meta charset="UTF-8">
-  <title>Activity 1: Basic HTML Bio</title>
-</head>
+<!-- <!DOCTYPE html>
+<html>
+<title>Data Analyst</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif;
+    }
+    body,
+    html {
+        height: 100%;
+        color: rgb(39, 31, 31);
+        line-height: 1.8;
+    }
+    /* Create a Parallax Effect */
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+        background-image: url('https://github.com/mrbalikci/images/blob/master/alanya.jpg?raw=true');
+        min-height: 100%;
+    }
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+        background-image: url("https://github.com/mrbalikci/images/blob/master/eveleye.JPG?raw=true");
+        min-height: 400px;
+    }
+    /* Third image (Contact) */
+    .bgimg-3 {
+        background-image: url("https://github.com/mrbalikci/images/blob/master/data.jpg?raw=true");
+        min-height: 400px;
+    }
+    .w3-wide {
+        letter-spacing: 10px;
+    }
+    .w3-hover-opacity {
+        cursor: pointer;
+    }
+    .boxhead a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    .boxhead-load a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    .load-center {
+        align-items: center;
+        justify-content: center;
+    }
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1024px) {
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            background-attachment: scroll;
+        }
+    }
+</style>
 
 <body>
-    <h1>Muhlis Cokadar</h1>
 
-    <img src = "C:\Users\muhli\OneDrive\Imagens\2017-07\IMG_5769.jpg" alt = 'once upon a time' />
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()"
+                title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button w3-hide-small">
+                <i class="fa fa-user"></i> ABOUT</a>
+            <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small">
+                <i class="fa fa-th"></i> PORTFOLIO</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small">
+                <i class="fa fa-envelope"></i> CONTACT</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
 
-    <h4>Motivated, teamwork-oriented, and responsible Data Analyst with significant business experience in different countries and industries. <br> Currently holding a Master’s in Business Administration and pursuing professional IT certification in Data Analytics and Visualization. <br> Bilingual in English and Turkish, with an intermediate understanding of Portuguese.</h4>
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+        </div>
+    </div>
 
-    <br>
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">ERDEM
+                <span class="w3-hide-small">BALIKCI</span>
+        </div>
+    </div>
 
-    <strong>
-        <a href="https://www.linkedin.com/in/muhlis-cokadar-46186148/" target="_blank"/>Linkedin</a>
-    </strong>
-    <br>
-    <strong>
-        <a href="https://github.com/muhliscokadar/" target="_blank"/>GitHub</a>
-    </strong>
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">ABOUT ME</h3>
+        <p class="w3-center">
+            <em>I am a Data Analyst living in Austin, TX</em>
+        </p>
+        <p>Strategic, multidisciplinary Data Analyst with an eye for innovation and analytical perfection. Proactively perfecting
+            my skill sets and deepening my experience with tools like VBA, Python, SQL, HTML, CSS, Mango, JavaScript, D3.js,
+            Tableau, and Hadoop. A firm believer who focuses on Social Analytic, Web Scraping, APIs, Web Charting, and Machine
+            Learning. Combining my expertise and applied mathematics background in such areas to deliver the best creative
+            data visualizations with perfect approximation algorithms. Adept experience collecting, cleaning, analyzing,
+            and making meaningful stories out of the data with the best tools available. </p>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p>
+                    <b>
+                        <i class="fa fa-user w3-margin-right"></i>Erdem Balikci</b>
+                </p>
+                <br>
+                <img src="https://github.com/mrbalikci/images/blob/master/ship.jpg?raw=true" class="w3-round w3-image w3-opacity w3-hover-opacity-off"
+                    alt="Photo of Me" width="500" height="333">
+            </div>
 
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+                <p> Welcome to my portfolio. A young professional here with a passion to learn! My name is Erdem J. Balikci and
+                    I am a Full-Stack Data Analyst from Austin area. I am a recent graduate of the University of Texas at
+                    Austin Data Analytics and Visualization Program. I have a Master of Science in Applied Mathematics and am interested
+                    in data analysis and object-oriented programming. I pride myself on my ability to solve problems and
+                    I love taking on new challenges. I hope to continue my growth as a programmer/data miner and would like
+                    to reach a point of proficiency with any computer language.</p>
+            </div>
+        </div>
+        <p class="w3-large w3-center w3-padding-16">I'm really good at:</p>
+        <p class="w3-wide">
+            <i class="fa fa-hashtag"></i>Python Programming: Python, Numpy, Pandas, Matplotlib, API Interactions, Social Media Mining</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:95%">95%</div>
+        </div>
+        <p class="w3-wide">
+            <i class="fa fa-laptop"></i>Databases: MySQL, MongoDB</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+        </div>
+        <p class="w3-wide">
+            <i class="fa fa-code"></i>Web Visualization: HTML, CSS, Bootstrap, Dashboarding, JavaScript, D3.js, Leaflet.js</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+        </div>
+        <p class="w3-wide">
+            <i class="fa fa-camera"></i>Business Intelligence Software: Tableau</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:83%">83%</div>
+        </div>
+        <p class="w3-wide">
+            <i class="fa fa-pie-chart"></i>Other: Hadoop, Machine Learning, R, Excel Pivot Tables, VBA Scripting</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:80%">80%</div>
+        </div>
+    </div>
 
-  
-        <p>My cup of tea</p>
-        <table>
-            <tr>
-                <th>Movies</th>
-                <th>Songs</th>
-                <th>Activities</th>
-                
-            </tr>
-            <tr>
-                <td>Pulp Fiction</td>
-                <td>Nu Man O To</td>
-                <td>Walking</td>
-          
-            </tr>
-            <tr>
-                <td>Godfather</td>
-                <td>Murderers</td>
-                <td>Hiking</td>
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">7+</span>
+            <br> Certifications
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">25+</span>
+            <br> Projects Done
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">55+</span>
+            <br> Accomplishments
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">4+</span>
+            <br> Cooding Years
+        </div>
+    </div>
 
-            </tr>  
+    <!-- Second Parallax Image with Portfolio Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+        </div>
+    </div>
 
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+        <h3 class="w3-center">SOME OF MY WORK</h3>
+        <p class="w3-center">
+            <em>Here are some of my latest projects and accomplishments.
+                <br> Click on the images to get them!</em>
+        </p>
+        <br>
+
+        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+        <div class="w3-row-padding w3-center">
+            <div class="w3-col m3">
+                <a href="https://github.com/mrbalikci/matplotlib-challange" target="_blank">
+                    <img src="https://github.com/mrbalikci/matplotlib-challange/blob/master/PyberRideSharigData.png?raw=true" style="width:100%"
+                        onclick="onClick(this)" class="w3-hover-opacity" alt="Ride Share">
+                </a>
+            </div>
+
+            <div class="w3-col m3">
+                <a href="https://github.com/mrbalikci/sqlalchemy" target="_blank">
+                    <img src="https://github.com/mrbalikci/sqlalchemy/blob/master/trip_avg_temp.png?raw=true" style="width:100%" onclick="onClick(this)"
+                        class="w3-hover-opacity" alt="Sqlalchemy">
+                </a>
+
+            </div>
+
+            <div class="w3-col m3">
+                <a href="https://github.com/mrbalikci/star_trek" target="_blank">
+                    <img src="https://github.com/mrbalikci/star_trek/blob/master/mosaic/mosaic_poster.png?raw=true" style="width:45%" onclick="onClick(this)"
+                        class="w3-hover-opacity" alt="Bear closeup">
+                </a>
+
+            </div>
+
+            <div class="w3-col m3">
+                <a href="https://github.com/mrbalikci/sentiment-challange" target="_blank">
+                    <img src="https://github.com/mrbalikci/sentiment-challange/blob/master/SentimentAnalysisAllMediaTweets.png?raw=true" style="width:100%"
+                        onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+                </a>
+
+            </div>
+        </div>
+
+        <div class="w3-row-padding w3-center w3-section">
+            <div class="w3-col m3">
+                <a href="https://github.com/mrbalikci/api-challange" target="_blank">
+                    <img src="https://github.com/mrbalikci/api-challange/blob/master/CityLatitudeVsMaxTemperature.png?raw=true" style="width:100%"
+                        onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+                </a>
+
+            </div>
+
+            <div class="w3-col m3">
+                <a href="https://github.com/mrbalikci/mysql-challange" target="_blank">
+                    <img src="https://github.com/mrbalikci/images/blob/master/sql.png?raw=true" style="width:65%" onclick="onClick(this)" class="w3-hover-opacity"
+                        alt="My beloved typewriter">
+                </a>
+
+            </div>
+
+            <div class="w3-col m3">
+                <a href="https://github.com/mrbalikci/schools-analysis-pandas" target="_blank">
+                    <img src="https://github.com/mrbalikci/images/blob/master/charter-school.png?raw=true" style="width:100%" onclick="onClick(this)"
+                        class="w3-hover-opacity" alt="Empty ghost train">
+                </a>
+
+            </div>
+
+            <div class="w3-col m3">
+                <a href="https://github.com/mrbalikci/advanced_excel" target="_blank">
+                    <img src="https://github.com/mrbalikci/images/blob/master/kick.png?raw=true" style="width:60%" onclick="onClick(this)" class="w3-hover-opacity"
+                        alt="Sailing">
+                </a>
+
+            </div>
+            <a href="https://github.com/mrbalikci" target="_blank">
+                <button class="w3-button w3-padding-large w3-light-grey load-center boxhead-load" style="margin-top:70px">SEE MORE</button>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image">
+            <i class="fa fa-remove"></i>
+        </span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
+
+    <!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+        <h3 class="w3-center">Quick, send me a message!
+        </h3>
+        <p class="w3-center">
+            <em>I'm very friendly.</em>
+        </p>
+
+        <div class="w3-row w3-padding-32 w3-section">
+
+            <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Austin, TX USA
+                    <br>
+                    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 1-512-650-6005
+                    <br>
+                    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mrbalikci@gmail.com
+                    <br>
+                </div>
+                <p>Swing by for a cup of
+                    <i class="fa fa-coffee"></i>, or leave me a note:</p>
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                        </div>
+                    </div>
+                    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+                    <button class="w3-button w3-black w3-right w3-section" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey">
+            <i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section boxhead">
+
+            <a href="https://github.com/mrbalikci" target="_blank">
+                <i class="fa fa-github w3-hover-opacity"></i>
+            </a>
+            <a href="https://twitter.com/drilldata " target="_blank">
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/erdemjohnbalikci/" target="_blank">
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </a>
+        </div>
+        <p>Copyright © Erdem Balikci 2018</p>
+    </footer>
 </body>
 
-</html>
+</html> -->
